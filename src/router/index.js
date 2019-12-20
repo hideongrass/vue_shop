@@ -31,6 +31,10 @@ router.beforeEach((to, from, next) => {
   // next 是一个函数 代表放行
   // next() 放行   next('/login') 括号里有路径 代表强制跳转到这个路径
   if (to.path === '/login') return next()
+  // 获取token
+  const tokenStr = window.sessionStorage.getItem('token')
+  if (!tokenStr) return next('/login')
+  next()
 })
 
 export default router
