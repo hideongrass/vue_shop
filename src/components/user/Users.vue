@@ -311,6 +311,10 @@ export default {
         return this.$message.error('删除用户失败')
       }
       this.$message.success('删除用户成功')
+
+      if (this.userlist.length <= 1) {
+        this.queryInfo.pagenum -= 1
+      }
       this.getUserList()
     },
     // 展示分配角色的对话框
