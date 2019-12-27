@@ -1,11 +1,8 @@
 <template>
   <div>
     <!-- 面包屑导航区 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>权限管理</el-breadcrumb-item>
-      <el-breadcrumb-item>权限列表</el-breadcrumb-item>
-    </el-breadcrumb>
+   <!-- 面包屑导航区-->
+    <bread nav1="权限管理" nav2="权限列表"></bread>
     <!-- 卡片视图 -->
     <el-card>
       <el-table :data="rightsList" border stripe>

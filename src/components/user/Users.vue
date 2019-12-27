@@ -1,12 +1,8 @@
 <template>
   <div>
     <!-- 面包屑导航区 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
-    </el-breadcrumb>
-
+    <!-- 面包屑导航区-->
+    <bread nav1="用户管理" nav2="用户列表"></bread>
     <!-- 卡片视图区域 -->
     <el-card>
       <el-row :gutter="20">
